@@ -1,11 +1,9 @@
 # Based on: https://replit.com/@ChrisMcAnally/Student-Solution#student.py
 
 class Student:
-    def __init__(self, name, level, courses = None):
+    def __init__(self, name, level, courses = []):
         self.name = name
         self.level = level
-        if not courses:
-            corses = []
         self.courses = courses
 
     def add_class(self, course_name):

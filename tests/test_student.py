@@ -37,11 +37,17 @@ def test_summary():
     assert anne.summary() == "Anne Byron is a senior enrolled in 2 classes"
 
 def test_get_student_with_more_classes():
+    #arrange
     charles = Student("Charles Babbage", "senior", ["mechanical engineering"])
     ada = Student(
         "Ada Lovelace",
         "sophomore",
         ["mathematics", "foundations of computing"]
     )
+    #act
+    best_student = get_student_with_more_classes(charles,ada)
+    best_student2 = get_student_with_more_classes(ada,charles)
+    #assert
+    assert best_student == ada
+    assert best_student2 == ada
 
-    # TODO: write assertions
