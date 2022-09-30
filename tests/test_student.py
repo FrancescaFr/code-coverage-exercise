@@ -4,12 +4,15 @@ def test_init():
     name = "Ada Lovelace"
     level = "sophomore"
     courses = ["mathematics", "foundations of computing"]
+    # no_courses = []
 
     ada = Student(name, level, courses)
+    lovelace = Student(name, level)
 
     assert ada.name == name
     assert ada.level == level
     assert ada.courses == courses
+    assert lovelace.courses == []
 
 def test_add_class():
     new_class = 'Intro to Feminism'
