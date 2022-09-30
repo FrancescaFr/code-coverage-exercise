@@ -17,5 +17,5 @@ class Student:
 
 def get_student_with_more_classes(student_a, student_b):
     if student_a.get_num_classes() > student_b.get_num_classes():
-        return student_b
+        return student_a
     return student_b
